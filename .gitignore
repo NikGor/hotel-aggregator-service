@@ -1,1 +1,16 @@
 .idea/
+*.egg-info
+__pycache__
+__pycache__/
+instance/
+dist/
+*.pyc
+.venv/
+.coverage
+coverage.xml
+.pytest_cache/
+user_data
+.env
+myenv
+poetry.lock
+db.sqlite3
