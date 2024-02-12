@@ -31,18 +31,3 @@ class MetaHotelAndHotelTests(APITestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['id'], "mercure_pattaya")
-
-    # def test_combine_hotels(self):
-    #     url = reverse('combine-hotels')
-    #
-    #     data = {
-    #         'meta_hotel_id': 'mercure_pattaya',
-    #         'hotel_ids': [1, 2, 3]
-    #     }
-    #
-    #     response = self.client.post(url, data, format='json')
-    #     self.assertEqual(response.status_code, status.HTTP_200_OK)
-    #     metahotel = MetaHotel.objects.get(id='new_meta_hotel')
-    #     self.assertIsNotNone(metahotel)
-    #     for hotel_id in data['hotel_ids']:
-    #         self.assertEqual(Hotel.objects.get(id=hotel_id).meta_hotel, metahotel)
